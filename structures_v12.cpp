@@ -23,10 +23,10 @@ struct StudentGrade
 {
     char fname[21];         // First name field (or data member)
     char lname[21];         // Last name field (or data member)
-    GradeInfo grades[5];
+    GradeInfo grades[5];    // Array of 5 grades
     double average;         // Average of 5 scores
-    char letter_grade;      // Letter grade: A B C D F
-    GradeInfo final_grade;   // Final grade info
+//  char letter_grade;      // Letter grade: A B C D F
+    GradeInfo final_grade;  // Final grade info
 };
 
 //Function prototype go here
@@ -54,12 +54,12 @@ int main(int argc, char *argv[])
 }
 
 // "get_student_info()" function
-// demonstrates using pointers to access structure
+//  demonstrates using pointers to access structure
 
 void get_student_info(StudentGrade * s)
 {    
     cout << "The size of pointers 's' is: " << sizeof(s) << endl << endl;
-    cout << sizeof(s) << endl << endl;
+//  cout << sizeof(s) << endl << endl;
 
     cout << "Enter first name: ";       //Data input
     cin >> (*s).fname;
@@ -94,16 +94,16 @@ void show_student_info(StudentGrade *s)
         cout << " Test score: " << s->grades[i].test;
         cout << "     " << s->grades[i].letter_grade << endl;
     }   
+
     s->average = get_average(ARRAY_SIZE(s->grades), s->grades);
     s->final_grade.letter_grade = get_grade(s->average);
 
     cout << endl << endl;
-    cout << "  Max score: " << max_score << endl;
+    cout << "\n  Max score: " << max_score << endl;
     cout << "    Average: " << s->average << endl;
     cout << "      Grade: " << s->final_grade.letter_grade << endl;
     cout << endl;
 }
-
 double get_average(int num_tests, GradeInfo grades[])
 {
     double sum = 0.0;
@@ -113,7 +113,6 @@ double get_average(int num_tests, GradeInfo grades[])
 
     return(sum / num_tests);
 }
-
 char get_grade(double avg)
 {
     char grade = 'F';

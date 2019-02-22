@@ -1,21 +1,7 @@
-The size of type 'GradeInfo' is: 8
-The size of type 'StudentGrade' is: 112
-The size of pointers 's' is: 8
-
-8
-
-Enter first name: Enter last name: Enter test score: Enter test score: Enter test score: Enter test score: Enter test score: 
-First name: s
-Last  name: ls
-
- Test score: 0     F
- Test score: 32767     A
- Test score: 0     F
- Test score: 0     F
- Test score: 0     F
-
-
-  Max score: 32767
-    Average: 6553.4
-      Grade: A
-
+Stevan
+Bitu
+90
+91
+89
+78
+77
